@@ -1,0 +1,24 @@
+<section id="attachCast">
+    <div class="attachCastSection">
+        <h1>Attach New Cast</h1>
+        <div class="attach-form">
+            <h2>{{movie.title}}</h2>
+            <img class="movie" src= {{movie.imageUrl}}>
+            <form action="/cast/{{movie._id}}/attach" method="POST">
+                <label for="cast">Cast</label>
+                <select id="cast" name="cast">
+
+                    {{#each casts}}
+
+                        <option value={{_id}}>{{name}}</option>
+
+                    {{/each}}
+                   
+                </select>
+                <div id="center-btn">
+                    <button id="create-btn">Add Cast</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
